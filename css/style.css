@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+p {
+  font-family: "Montserrat", system-ui;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+  line-height: 28px;
+}
+
+.custome-btn {
+  padding: 10px 20px;
+  background-color: #54A15D;
+  font-family: "Montserrat", system-ui;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #54A15D;
+}
+.custome-btn:hover {
+  background-color: transparent;
+  border: 1px solid #54A15D;
+  color: #54A15D;
+}
+
+.container {
+  width: 1320px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+
+.section-heading .heading {
+  font-size: 45px;
+  color: rgb(45, 55, 60);
+  font-family: "Barlow", system-ui;
+  font-weight: 800;
+}
+
+.section-heading.center-heading {
+  text-align: center;
+  width: 60%;
+  margin-inline: auto;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.d-grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tour-card {
+  box-shadow: 0px 0px 3px gray;
+  border-radius: 10px;
+}
+.tour-card img {
+  border-radius: 10px 10px 0px 0px;
+  height: 250px;
+  margin-bottom: 0px !important;
+}
+.tour-card .buttom-info {
+  padding: 0px 15px 15px;
+  position: relative;
+}
+.tour-card .buttom-info .duration {
+  background-color: white;
+  box-shadow: 0px 2px 5px gray;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #54A15D;
+  font-family: "Montserrat", system-ui;
+  font-weight: 600;
+  margin-inline: auto;
+  transform: translateY(-50%);
+}
+.tour-card .buttom-info a {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(69, 69, 69);
+  font-family: "Montserrat", system-ui;
+}
+.tour-card .buttom-info .info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.tour-card .buttom-info .info .custome-btn {
+  border-radius: 50px;
+  color: #54A15D;
+  background: transparent;
+}
+.tour-card .buttom-info .info .custome-btn:hover {
+  background-color: #54A15D;
+  color: white;
+}
+.tour-card .buttom-info .info .custome-btn:hover i {
+  transform: translateX(10px);
+}
+.tour-card .buttom-info .info .custome-btn i {
+  padding-left: 10px;
+  font-size: 10px;
+  transition: 0.5s;
+}
+.tour-card .buttom-info .info .price-wrapper {
+  font-family: "Montserrat", system-ui;
+  color: rgb(30, 30, 30);
+  font-size: 18;
+  font-weight: 500;
+}
+.tour-card .buttom-info .info .price-wrapper .price {
+  font-size: 16px;
+}
+.tour-card .buttom-info .info .price-wrapper .price span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #54A15D;
+  margin-right: 10px;
+}
+.tour-card .buttom-info::before {
+  content: "";
+  height: 0;
+  width: 0;
+  background-color: rgba(126, 188, 126, 0.251);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  z-index: -1;
+}
+.tour-card:hover .buttom-info::before {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-color: rgba(58, 68, 71, 0.6274509804);
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-family: "Montserrat", system-ui;
+}
+header nav ul {
+  display: flex;
+  gap: 50px;
+}
+header nav ul li {
+  text-transform: uppercase;
+}
+header nav ul li i {
+  font-size: 14px;
+  margin-left: 10px;
+  color: #54A15D;
+  transition: 0.5s;
+}
+header nav ul li:hover i {
+  transform: rotate(-180deg);
+}
+
+.banner-section {
+  position: relative;
+}
+.banner-section .banner-items {
+  position: relative;
+  height: 80vh;
+  background-color: black;
+}
+.banner-section .banner-items img {
+  opacity: 0.5;
+}
+.banner-section .banner-items .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.banner-section .banner-items .banner-content .tagline {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Montserrat", system-ui;
+}
+.banner-section .banner-items .banner-content .banner-heading {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Barlow", system-ui;
+}
+.banner-section .banner-items .banner-content p {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.banner-section .banner-items .banner-content .custome-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.banner-section .slick-prev,
+.banner-section .slick-next {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  right: 20px;
+  transition: all 0.5s ease;
+}
+.banner-section .slick-prev:hover,
+.banner-section .slick-next:hover {
+  background-color: #54A15D;
+  color: white;
+  border: 1px solid #54A15D;
+}
+.banner-section .slick-prev {
+  top: 45%;
+  z-index: 99;
+  transform: translateY(-100%);
+}
+.banner-section .slick-next {
+  top: 50%;
+}
+.banner-section .socila-media {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-lr;
+  color: white;
+  font-family: "Montserrat", system-ui;
+  display: flex;
+  gap: 50px;
+}
+.banner-section .socila-media a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner-section .socila-media a::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px dashed white;
+}
+.banner-section .animate-plane {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation: xyz 5s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes xyz {
+  0% {
+    transform: translateX(0) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+}
+.destination-item {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.destination-item .destination-img img {
+  width: 100%;
+  height: 320px;
+  transition: all 0.6s ease-in-out;
+}
+.destination-item .destination-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(179.97deg, rgba(32, 32, 32, 0) 20.42%, #202020 99.97%);
+  display: flex;
+  align-items: flex-end;
+}
+.destination-item .destination-overlay .content {
+  padding: 30px;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
+}
+.destination-item .destination-overlay .content h5 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.destination-item .destination-overlay .content h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.destination-item .destination-overlay .content h6::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #54A15D;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+.destination-item .destination-overlay .content h6:hover::after {
+  width: 100%;
+}
+.destination-item:hover .destination-img img {
+  transform: scale(1.2);
+}
+.destination-item:hover .destination-overlay .content {
+  transform: translateY(0px);
+}
+.destination-item:hover .destination-overlay .content h6 {
+  opacity: 1;
+}
+
+.top-destination .wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.top-destination .wrapper .destination-item:first-child, .top-destination .wrapper .destination-item:last-child {
+  grid-column: span 2;
+}
+
+.destination-item {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.destination-item .destination-img img {
+  width: 100%;
+  height: 320px;
+  transition: all 0.6s ease-in-out;
+}
+.destination-item .destination-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(179.97deg, rgba(32, 32, 32, 0) 20.42%, #202020 99.97%);
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+}
+.destination-item .destination-overlay .content {
+  padding: 30px;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
+}
+.destination-item .destination-overlay .content h5 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.destination-item .destination-overlay .content h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.destination-item .destination-overlay .content h6::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #54A15D;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+.destination-item .destination-overlay .content:hover h6::after {
+  width: 100%;
+}
+.destination-item:hover .destination-img img {
+  transform: scale(1.2);
+}
+.destination-item:hover .destination-overlay .content {
+  transform: translateY(0px);
+}
+.destination-item:hover .destination-overlay .content h6 {
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
